@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ServiceAreaChecker from "@/components/website/ServiceAreaChecker";
 
 const cities = [
   "Koblenz",
@@ -9,32 +10,10 @@ const cities = [
   "Ahrweiler",
 ];
 
-function RegionMap() {
-  return (
-    <svg
-      viewBox="0 0 400 280"
-      className="h-full w-full text-gold/40"
-      aria-hidden
-    >
-      <path
-        d="M40 200 Q120 80 200 120 T360 60"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="3"
-      />
-      <circle cx="200" cy="130" r="6" className="fill-burgundy" />
-      <circle cx="120" cy="160" r="4" className="fill-gold" />
-      <circle cx="280" cy="100" r="4" className="fill-gold" />
-      <circle cx="160" cy="90" r="4" className="fill-gold" />
-      <circle cx="240" cy="180" r="4" className="fill-gold" />
-    </svg>
-  );
-}
-
 export default function EinzugsgebietSection() {
   return (
     <section id="einzugsgebiet" className="bg-gold-pale px-4 py-14 sm:px-6 md:px-12 md:py-20">
-      <div className="mx-auto grid max-w-[1100px] items-center gap-8 md:grid-cols-2 md:gap-14">
+      <div className="mx-auto grid max-w-[1100px] items-start gap-8 md:grid-cols-2 md:gap-14">
         <div>
           <p className="mb-2 text-[11px] uppercase tracking-[2px] text-burgundy/70">
             Einzugsgebiet
@@ -62,6 +41,10 @@ export default function EinzugsgebietSection() {
             ))}
           </div>
 
+          <div className="mt-6 md:hidden">
+            <ServiceAreaChecker />
+          </div>
+
           <Link
             href="/#kontakt"
             className="mt-6 hidden rounded-sm bg-burgundy px-7 py-3 text-sm font-medium text-white transition-colors hover:bg-burgundy/90 md:inline-block"
@@ -70,8 +53,24 @@ export default function EinzugsgebietSection() {
           </Link>
         </div>
 
-        <div className="hidden h-80 items-center justify-center rounded border border-border bg-white p-8 md:flex">
-          <RegionMap />
+        <div className="space-y-4">
+          <div className="overflow-hidden rounded border border-border bg-white">
+            <img
+              src="/einzugsgebiet-map.svg"
+              alt="Schematische Karte des Einzugsgebiets am Mittelrhein zwischen Bonn und Koblenz"
+              width={800}
+              height={520}
+              className="h-auto w-full"
+            />
+            <p className="border-t border-border px-3 py-2 text-[10px] text-text-hint">
+              Kartendarstellung vereinfacht · Geodaten © OpenStreetMap-Mitwirkende
+              (ODbL), wo einschlägig
+            </p>
+          </div>
+
+          <div className="hidden md:block">
+            <ServiceAreaChecker />
+          </div>
         </div>
       </div>
     </section>

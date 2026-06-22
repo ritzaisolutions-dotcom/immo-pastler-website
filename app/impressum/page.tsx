@@ -7,9 +7,9 @@ export const metadata: Metadata = {
 
 export default function ImpressumPage() {
   return (
-    <main className="flex-1 px-12 py-16">
+    <main className="flex-1 px-4 py-14 sm:px-6 md:px-12 md:py-16">
       <article className="mx-auto max-w-2xl">
-        <h1 className="font-display text-4xl text-navy">Impressum</h1>
+        <h1 className="font-display text-3xl text-navy sm:text-4xl">Impressum</h1>
 
         <div className="mt-8 space-y-8 text-sm leading-relaxed text-text-secondary">
           <section>
@@ -52,11 +52,21 @@ export default function ImpressumPage() {
 
           <section>
             <h2 className="mb-2 font-medium text-text-primary">
+              Umsatzsteuer-Identifikationsnummer
+            </h2>
+            <p>DE450763885</p>
+          </section>
+
+          <section>
+            <h2 className="mb-2 font-medium text-text-primary">
               Erlaubnis nach § 34c GewO
             </h2>
             <p>
               Immobilienverwaltung Pastler UG ist als Hausverwaltung nach § 34c
               der Gewerbeordnung zugelassen.
+            </p>
+            <p className="mt-3">
+              Zertifizierter Verwalter nach § 26a WEG (IHK).
             </p>
           </section>
 
@@ -68,6 +78,19 @@ export default function ImpressumPage() {
               Wir sind nicht bereit oder verpflichtet, an
               Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
               teilzunehmen.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="mb-2 font-medium text-text-primary">Bildnachweise</h2>
+            <p>
+              Logo, Porträt, Hero-Video und weitere Bilder auf dieser Website:
+              Immobilienverwaltung Pastler UG (eigene Aufnahmen bzw.
+              Nutzungsrechte).
+            </p>
+            <p className="mt-3">
+              Schematische Einzugsgebietskarte: vereinfachte Darstellung;
+              Geodaten © OpenStreetMap-Mitwirkende (ODbL), wo einschlägig.
             </p>
           </section>
         </div>

@@ -1,0 +1,31 @@
+# Pastler Immobilienverwaltung
+
+> Professionelle WEG- und Mietverwaltung in Koblenz und am Mittelrhein.
+
+## Unternehmen
+
+- Name: Immobilienverwaltung Pastler UG (haftungsbeschränkt)
+- Sitz: Kammertsweg 66, 56070 Koblenz, Deutschland
+- Website: https://pastler.com
+- E-Mail: hausverwaltung@pastler.com
+- Telefon: 0261 1349 4710
+
+## Leistungen
+
+- WEG-Verwaltung (Wohnungseigentumsverwaltung) nach §27 WEG
+- Mietverwaltung
+- Technisches, organisatorisches, rechtliches und kaufmännisches Objektmanagement
+- Zertifiziert nach §34c GewO, Verwalter nach §26a WEG (IHK)
+
+## Einzugsgebiet
+
+Kerngebiet am Mittelrhein zwischen Bonn und Koblenz, u. a. Koblenz, Andernach, Neuwied, Sinzig, Mayen, Bad Neuenahr-Ahrweiler, Braubach.
+
+## Kontakt
+
+Anfragen über das Kontaktformular auf der Startseite (/). Kein öffentliches Dashboard.
+
+## Rechtliches
+
+- Impressum: /impressum
+- Datenschutz: /datenschutz

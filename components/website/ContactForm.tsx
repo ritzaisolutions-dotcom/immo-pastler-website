@@ -223,7 +223,9 @@ export default function ContactForm() {
         />
         <span>
           Ich willige ein, dass meine Angaben zur Bearbeitung meiner Anfrage
-          verarbeitet werden. Weitere Informationen finden Sie in unserer{" "}
+          verarbeitet werden (Art. 6 Abs. 1 lit. a DSGVO). Weitere
+          Informationen, einschließlich weiterer Rechtsgrundlagen, finden Sie in
+          unserer{" "}
           <Link href="/datenschutz" className="text-burgundy underline">
             Datenschutzerklärung
           </Link>

@@ -1,7 +1,21 @@
-const pillars = [
+import {
+  Calculator,
+  ClipboardList,
+  Scale,
+  Wrench,
+  type LucideIcon,
+} from "lucide-react";
+
+const pillars: {
+  number: string;
+  title: string;
+  icon: LucideIcon;
+  features: string[];
+}[] = [
   {
     number: "01",
     title: "Technisch",
+    icon: Wrench,
     features: [
       "Regelmäßige Objektbegehungen",
       "Erfassung der Verbrauchswerte (Heizung, Wasser, Strom)",
@@ -12,6 +26,7 @@ const pillars = [
   {
     number: "02",
     title: "Organisatorisch",
+    icon: ClipboardList,
     features: [
       "Korrespondenz mit Mietern, Behörden, Handwerkern",
       "Erstellung von Nebenkosten- und Heizkostenabrechnungen",
@@ -22,6 +37,7 @@ const pillars = [
   {
     number: "03",
     title: "Rechtlich",
+    icon: Scale,
     features: [
       "Beachtung rechtlicher Verordnungen",
       "Bearbeitung von Versicherungsschäden und Rechtsstreitigkeiten",
@@ -32,6 +48,7 @@ const pillars = [
   {
     number: "04",
     title: "Kaufmännisch",
+    icon: Calculator,
     features: [
       "Verwaltung der gemeinschaftlichen Finanzen",
       "Abschluss und Neuordnung von Versicherungsverträgen",
@@ -83,32 +100,45 @@ export default function LeistungenSection() {
         </p>
 
         <div className="mt-8 grid gap-4 md:mt-12 md:grid-cols-2 md:gap-5">
-          {pillars.map((pillar) => (
-            <article
-              key={pillar.number}
-              className="relative rounded border border-border bg-warm-white p-5 before:absolute before:inset-x-0 before:top-0 before:h-0.5 before:rounded-t before:bg-gold md:p-7"
-            >
-              <p className="font-display text-3xl text-border md:text-4xl">
-                {pillar.number}
-              </p>
-              <h3 className="mt-3 font-display text-xl text-burgundy md:mt-4 md:text-[22px]">
-                {pillar.title}
-              </h3>
-              <ul className="mt-4 space-y-2 md:mt-5">
-                {pillar.features.map((feature, index) => (
-                  <li
-                    key={feature}
-                    className={`flex items-start gap-2 text-sm text-text-primary ${
-                      index >= 2 ? "hidden md:flex" : "flex"
-                    }`}
+          {pillars.map((pillar) => {
+            const Icon = pillar.icon;
+            return (
+              <article
+                key={pillar.number}
+                className="relative rounded border border-border bg-warm-white p-5 before:absolute before:inset-x-0 before:top-0 before:h-0.5 before:rounded-t before:bg-gold md:p-7"
+              >
+                <div className="flex items-start gap-4">
+                  <div
+                    className="flex h-10 w-10 shrink-0 items-center justify-center bg-navy text-gold"
+                    aria-hidden
                   >
-                    <CheckIcon />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </article>
-          ))}
+                    <Icon className="h-5 w-5" strokeWidth={1.75} />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <p className="font-display text-3xl text-border md:text-4xl">
+                      {pillar.number}
+                    </p>
+                    <h3 className="mt-2 font-display text-xl text-burgundy md:mt-3 md:text-[22px]">
+                      {pillar.title}
+                    </h3>
+                  </div>
+                </div>
+                <ul className="mt-4 space-y-2 md:mt-5">
+                  {pillar.features.map((feature, index) => (
+                    <li
+                      key={feature}
+                      className={`flex items-start gap-2 text-sm text-text-primary ${
+                        index >= 2 ? "hidden md:flex" : "flex"
+                      }`}
+                    >
+                      <CheckIcon />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

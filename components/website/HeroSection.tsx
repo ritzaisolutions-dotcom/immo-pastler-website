@@ -1,25 +1,13 @@
 import Link from "next/link";
+import HeroMedia from "@/components/website/HeroMedia";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[min(100svh,520px)] overflow-hidden px-4 py-16 sm:min-h-[520px] sm:px-6 sm:py-20 md:min-h-[600px] md:px-12 md:py-28">
-      <video
-        className="hero-video absolute inset-0 h-full w-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-        poster="/Pic_pastler.avif"
-        aria-hidden
-      >
-        <source src="/Hero_Vid.mp4" type="video/mp4" />
-      </video>
-
-      <div
-        className="hero-fallback-image absolute inset-0 hidden bg-cover bg-center"
-        style={{ backgroundImage: "url(/Pic_pastler.avif)" }}
-        aria-hidden
-      />
+    <section
+      id="hero"
+      className="relative min-h-[min(100svh,520px)] overflow-hidden px-4 py-16 sm:min-h-[520px] sm:px-6 sm:py-20 md:min-h-[600px] md:px-12 md:py-28"
+    >
+      <HeroMedia />
 
       <div
         className="absolute inset-0 bg-gold/35 mix-blend-multiply"
@@ -42,11 +30,11 @@ export default function HeroSection() {
 
         <p className="mt-4 max-w-md text-sm leading-relaxed text-white/90 sm:mt-5 sm:max-w-[560px] sm:text-[15px]">
           <span className="md:hidden">
-            WEG- &amp; Mietverwaltung · persönlich · §34c zertifiziert
+            WEG- &amp; Mietverwaltung in Koblenz und Region · persönlich
           </span>
           <span className="hidden md:inline">
             WEG- &amp; Mietverwaltung in Koblenz und Region · persönlich ·
-            digital · §34c zertifiziert
+            digital
           </span>
         </p>
 
@@ -64,16 +52,6 @@ export default function HeroSection() {
             Leistungen ansehen
           </Link>
         </div>
-      </div>
-
-      <div
-        className="absolute bottom-6 right-6 hidden rounded border border-gold/40 bg-gold/15 p-4 text-center md:right-12 md:block"
-        aria-label="Zulassung nach Paragraph 34c Gewerbeordnung"
-      >
-        <p className="font-display text-2xl text-gold-pale">§34c</p>
-        <p className="mt-1 text-[10px] uppercase tracking-[1.5px] text-white/60">
-          GewO zugelassen
-        </p>
       </div>
     </section>
   );

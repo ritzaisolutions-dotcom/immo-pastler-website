@@ -1,11 +1,21 @@
 import Link from "next/link";
 import PastlerLogo from "@/components/PastlerLogo";
 import MobileNav from "@/components/website/MobileNav";
-import { desktopNavLinks, navLinks } from "@/components/website/nav-links";
+import { desktopNavLinks } from "@/components/website/nav-links";
+import { cn } from "@/lib/utils";
 
-export default function Nav() {
+type NavProps = {
+  className?: string;
+};
+
+export default function Nav({ className }: NavProps) {
   return (
-    <header className="sticky top-0 z-50 border-b border-gold-light/60 bg-gold shadow-sm">
+    <header
+      className={cn(
+        "sticky top-0 z-50 border-b border-gold-light/60 bg-gold shadow-sm",
+        className,
+      )}
+    >
       <div className="mx-auto flex h-14 max-w-[1100px] items-center justify-between gap-3 px-4 sm:h-[68px] sm:gap-4 sm:px-6 md:px-12">
         <PastlerLogo
           variant="light"
