@@ -1,12 +1,14 @@
 import Link from "next/link";
+import Nav from "@/components/website/Nav";
 import HeroMedia from "@/components/website/HeroMedia";
 
 export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-[min(100svh,520px)] overflow-hidden px-4 py-16 sm:min-h-[520px] sm:px-6 sm:py-20 md:min-h-[600px] md:px-12 md:py-28"
+      className="relative min-h-[min(100svh,520px)] overflow-hidden px-4 pt-14 sm:min-h-[520px] sm:px-6 sm:pt-[68px] md:min-h-[600px] md:px-12"
     >
+      <Nav />
       <HeroMedia />
 
       <div
@@ -19,7 +21,7 @@ export default function HeroSection() {
         aria-hidden
       />
 
-      <div className="relative mx-auto max-w-[1100px]">
+      <div className="relative mx-auto max-w-[1100px] py-10 sm:py-14 md:py-20">
         <p className="mb-2 text-[10px] uppercase tracking-[2px] text-gold-pale sm:mb-3 sm:text-[11px] sm:tracking-[2.5px]">
           Hausverwaltung Koblenz
         </p>
