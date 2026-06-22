@@ -1,0 +1,59 @@
+{
+  "name": "Pastler Website — Kontaktanfrage",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "pastler-kontakt",
+        "authentication": "headerAuth",
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "id": "webhook-trigger",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [0, 0],
+      "webhookId": "pastler-kontakt"
+    },
+    {
+      "parameters": {
+        "fromEmail": "noreply@pastler.com",
+        "toEmail": "hausverwaltung@pastler.com",
+        "subject": "=Neue Kontaktanfrage: {{ $json.body.anliegen }}",
+        "text": "=Neue Kontaktanfrage über pastler.com\n\nName: {{ $json.body.name }}\nE-Mail: {{ $json.body.email }}\nTelefon: {{ $json.body.telefon || '—' }}\nAnliegen: {{ $json.body.anliegen }}\n\nNachricht:\n{{ $json.body.nachricht }}\n\nEingang: {{ $json.body.timestamp }}",
+        "options": {}
+      },
+      "id": "send-email",
+      "name": "E-Mail an Pastler",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [220, 0],
+      "credentials": {
+        "smtp": {
+          "id": "CONFIGURE_IN_N8N",
+          "name": "Pastler SMTP"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "E-Mail an Pastler",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "templateCredsSetupCompleted": false
+  }
+}
