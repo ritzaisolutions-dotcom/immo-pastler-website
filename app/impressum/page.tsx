@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Impressum — Pastler Immobilienverwaltung",
+  title: "Impressum",
 };
 
 export default function ImpressumPage() {
@@ -89,8 +89,7 @@ export default function ImpressumPage() {
               Nutzungsrechte).
             </p>
             <p className="mt-3">
-              Schematische Einzugsgebietskarte: vereinfachte Darstellung;
-              Geodaten © OpenStreetMap-Mitwirkende (ODbL), wo einschlägig.
+              Einzugsgebiet: Immobilienverwaltung Pastler (eigene Aufnahme).
             </p>
           </section>
         </div>

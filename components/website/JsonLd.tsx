@@ -6,7 +6,7 @@ const organization = {
   "@context": "https://schema.org",
   "@type": ["RealEstateAgent", "LocalBusiness"],
   name: "Immobilienverwaltung Pastler UG (haftungsbeschränkt)",
-  alternateName: "Pastler Immobilienverwaltung",
+  alternateName: "Immobilienverwaltung Pastler",
   url: siteUrl,
   logo: `${siteUrl}/JPlogo-png.avif`,
   image: `${siteUrl}/hero_vid_fallbackpic.jpg`,

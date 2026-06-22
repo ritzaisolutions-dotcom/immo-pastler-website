@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import CtaBand from "@/components/website/CtaBand";
 import EinzugsgebietSection from "@/components/website/EinzugsgebietSection";
 import HeroSection from "@/components/website/HeroSection";
@@ -8,6 +9,12 @@ import PartnerSection from "@/components/website/PartnerSection";
 import TestimonialSection from "@/components/website/TestimonialSection";
 import TrustBar from "@/components/website/TrustBar";
 import UeberUnsSection from "@/components/website/UeberUnsSection";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "Immobilienverwaltung Pastler — Hausverwaltung Koblenz",
+  },
+};
 
 export default function HomePage() {
   return (

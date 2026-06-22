@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Datenschutz — Pastler Immobilienverwaltung",
+  title: "Datenschutz",
 };
 
 export default function DatenschutzPage() {
@@ -192,7 +192,62 @@ export default function DatenschutzPage() {
           </section>
 
           <section>
-            <h2 className="mb-2 font-medium text-text-primary">9. Ihre Rechte</h2>
+            <h2 className="mb-2 font-medium text-text-primary">
+              9. Einzugsgebiet prüfen
+            </h2>
+            <p>
+              Auf unserer Website können Sie freiwillig prüfen, ob Ihre Adresse in
+              unserem Einzugsgebiet liegt. Die von Ihnen eingegebene Adresse wird
+              ausschließlich lokal in Ihrem Browser ausgewertet (Extraktion der
+              Postleitzahl und Abgleich mit statischen Listen).
+            </p>
+            <p className="mt-3">
+              Die eingegebenen Daten werden dabei nicht an uns oder Dritte
+              übermittelt und nicht von uns gespeichert.
+            </p>
+          </section>
+
+          <section id="google-bewertungen">
+            <h2 className="mb-2 font-medium text-text-primary">
+              10. Links zu Google (Bewertungen)
+            </h2>
+            <p>
+              Auf unserer Website bieten wir einen freiwilligen Link an, über den
+              Sie eine Bewertung bei Google hinterlassen können (z. B. Google
+              Maps). Beim bloßen Besuch unserer Website werden dabei keine Daten
+              an Google übermittelt.
+            </p>
+            <p className="mt-3">
+              Wenn Sie den Link aktivieren, verlassen Sie unsere Website und
+              rufen die Dienste von Google auf. Google kann dann
+              personenbezogene Daten verarbeiten (z. B. IP-Adresse, Geräteinformationen,
+              ggf. Kontodaten, wenn Sie bei Google angemeldet sind). Anbieter ist
+              Google LLC, USA. Es kann ein Datentransfer in Drittländer stattfinden;
+              Google stützt sich hierbei unter anderem auf Standardvertragsklauseln
+              der EU-Kommission. Details finden Sie in der Datenschutzerklärung von
+              Google unter{" "}
+              <a
+                href="https://policies.google.com/privacy?hl=de"
+                className="text-burgundy underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                policies.google.com/privacy
+              </a>
+              .
+            </p>
+            <p className="mt-3">
+              <strong className="font-medium text-text-primary">
+                Rechtsgrundlage:
+              </strong>{" "}
+              Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der
+              Möglichkeit, freiwillig Feedback zu hinterlassen) bzw. Ihre
+              freiwillige Nutzung des externen Angebots.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="mb-2 font-medium text-text-primary">11. Ihre Rechte</h2>
             <p>
               Sie haben das Recht auf Auskunft, Berichtigung, Löschung,
               Einschränkung der Verarbeitung, Widerspruch und
@@ -215,11 +270,15 @@ export default function DatenschutzPage() {
 
           <section>
             <h2 className="mb-2 font-medium text-text-primary">
-              10. Keine Tracking-Tools
+              12. Keine eingebetteten Tracking-Tools
             </h2>
             <p>
-              Diese Website verwendet keine Tracking-Dienste wie Google Analytics,
-              Facebook Pixel oder vergleichbare Analyse- und Marketing-Tools.
+              Diese Website verwendet keine eingebetteten Analyse- oder
+              Marketing-Dienste wie Google Analytics, Facebook Pixel oder
+              vergleichbare Tracking-Tools. Das schließt freiwillige externe
+              Links (z. B. zu Google-Bewertungen, siehe Abschnitt 10) nicht ein —
+              dort gelten die Datenschutzbestimmungen des jeweiligen Anbieters,
+              sobald Sie den Link aktiv nutzen.
             </p>
           </section>
         </div>

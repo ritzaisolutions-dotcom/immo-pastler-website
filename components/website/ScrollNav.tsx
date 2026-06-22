@@ -42,13 +42,16 @@ export default function ScrollNav() {
   }, [isHome]);
 
   return (
-    <Nav
-      className={cn(
-        reduceMotion ? "" : "transition-[transform,opacity] duration-300",
-        visible
-          ? "translate-y-0 opacity-100"
-          : "-translate-y-full opacity-0 pointer-events-none",
-      )}
-    />
+    <>
+      <Nav
+        className={cn(
+          reduceMotion ? "" : "transition-[transform,opacity] duration-300",
+          visible
+            ? "translate-y-0 opacity-100"
+            : "-translate-y-full opacity-0 pointer-events-none",
+        )}
+      />
+      {!isHome && <div className="h-14 shrink-0 sm:h-[68px]" aria-hidden />}
+    </>
   );
 }

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import ServiceAreaChecker from "@/components/website/ServiceAreaChecker";
 
@@ -55,16 +56,15 @@ export default function EinzugsgebietSection() {
 
         <div className="space-y-4">
           <div className="overflow-hidden rounded border border-border bg-white">
-            <img
-              src="/einzugsgebiet-map.svg"
-              alt="Schematische Karte des Einzugsgebiets am Mittelrhein zwischen Bonn und Koblenz"
-              width={800}
-              height={520}
-              className="h-auto w-full"
+            <Image
+              src="/Umgebung2.avif"
+              alt="Einzugsgebiet der Immobilienverwaltung Pastler am Mittelrhein"
+              width={1200}
+              height={800}
+              className="h-auto w-full object-cover"
             />
             <p className="border-t border-border px-3 py-2 text-[10px] text-text-hint">
-              Kartendarstellung vereinfacht · Geodaten © OpenStreetMap-Mitwirkende
-              (ODbL), wo einschlägig
+              Unser Einzugsgebiet zwischen Bonn und Koblenz am Mittelrhein
             </p>
           </div>
 

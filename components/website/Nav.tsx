@@ -12,7 +12,7 @@ export default function Nav({ className }: NavProps) {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 border-b border-gold-light/60 bg-gold shadow-sm",
+        "fixed top-0 right-0 left-0 z-50 border-b border-gold-light/60 bg-gold shadow-sm",
         className,
       )}
     >
@@ -21,7 +21,6 @@ export default function Nav({ className }: NavProps) {
           variant="light"
           layout="horizontal"
           showWordmark
-          hideWordmarkOnMobile
           linkToHome
         />
 

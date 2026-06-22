@@ -25,13 +25,14 @@ const siteUrl =
   "https://pastler.com";
 
 const defaultTitle =
-  "Pastler Immobilienverwaltung — Hausverwaltung Koblenz";
+  "Immobilienverwaltung Pastler — Hausverwaltung Koblenz";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  applicationName: "Immobilienverwaltung Pastler",
   title: {
     default: defaultTitle,
-    template: "%s | Pastler",
+    template: "%s | Immobilienverwaltung Pastler",
   },
   description:
     "Professionelle WEG- und Mietverwaltung in Koblenz und Region. Zertifiziert nach §34c GewO. Reaktion innerhalb von 24 Stunden.",
@@ -44,15 +45,11 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Immobilienverwaltung Pastler UG" }],
   creator: "Immobilienverwaltung Pastler UG",
-  icons: {
-    icon: "/JPlogo-png.avif",
-    apple: "/JPlogo-png.avif",
-  },
   openGraph: {
     type: "website",
     locale: "de_DE",
     url: siteUrl,
-    siteName: "Pastler Immobilienverwaltung",
+    siteName: "Immobilienverwaltung Pastler",
     title: defaultTitle,
     description:
       "Professionelle WEG- und Mietverwaltung in Koblenz und Region.",

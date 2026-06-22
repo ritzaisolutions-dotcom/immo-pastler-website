@@ -20,9 +20,10 @@ export default function PastlerLogo({
   className = "",
   imageClassName = "",
 }: PastlerLogoProps) {
-  const wordmarkClass =
+  const wordmarkPrimaryClass =
     variant === "dark" ? "text-white" : "text-burgundy";
-  const periodClass = variant === "dark" ? "text-gold" : "text-burgundy/70";
+  const wordmarkSecondaryClass =
+    variant === "dark" ? "text-white/75" : "text-burgundy/70";
   const imageSize =
     layout === "horizontal" ? "h-auto w-10 sm:w-12" : "h-auto w-[88px]";
 
@@ -30,26 +31,35 @@ export default function PastlerLogo({
     <div
       className={`flex ${
         layout === "horizontal"
-          ? "flex-row items-center gap-3"
+          ? "flex-row items-center gap-2.5 sm:gap-3"
           : "flex-col items-center"
       } ${className}`}
     >
       <Image
         src="/JPlogo-png.avif"
-        alt="Pastler Immobilienverwaltung — Hausverwaltung Koblenz"
+        alt="Immobilienverwaltung Pastler — Hausverwaltung Koblenz"
         width={120}
         height={132}
         className={`${imageSize} ${imageClassName}`}
         priority
       />
       {showWordmark && (
-        <p
-          className={`font-display tracking-[3px] ${
-            layout === "horizontal" ? "text-sm sm:text-base" : "mt-3 text-sm"
-          } ${wordmarkClass} ${hideWordmarkOnMobile ? "hidden sm:block" : ""}`}
+        <div
+          className={`min-w-0 leading-tight ${
+            hideWordmarkOnMobile ? "hidden sm:block" : ""
+          }`}
         >
-          PASTLER<span className={periodClass}>.</span>
-        </p>
+          <p
+            className={`font-sans text-[9px] uppercase tracking-[1.5px] sm:text-[10px] sm:tracking-[1.8px] ${wordmarkSecondaryClass}`}
+          >
+            Immobilienverwaltung
+          </p>
+          <p
+            className={`font-display text-sm tracking-[1.5px] sm:text-base sm:tracking-[2px] ${wordmarkPrimaryClass}`}
+          >
+            Pastler
+          </p>
+        </div>
       )}
     </div>
   );
